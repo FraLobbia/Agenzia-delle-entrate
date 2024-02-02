@@ -12,9 +12,9 @@ namespace Agenzia_delle_entrate
     {
         public static void Menu() 
         {
-            Console.WriteLine("======================= AGENZIA DELLE ENTRATE =============================\n");
-            Console.WriteLine("Benvenuto! Inserire i propri dati per registrarsi:\n");
-            Console.WriteLine("===========================================================================\n");
+            Console.WriteLine("======================= AGENZIA DELLE ENTRATE =============================");
+            Console.WriteLine("Benvenuto! Inserire i propri dati per un riepilogo di quanto dovuto:");
+            Console.WriteLine("===========================================================================");
 
             Console.WriteLine("Nome:");
             string nome = Console.ReadLine();

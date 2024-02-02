@@ -30,6 +30,7 @@ namespace Agenzia_delle_entrate
             this.SetScaglione();
         }
 
+        // in base al reddito annuale calcola l'imposta dovuta in base ai vari scaglioni
         private void SetScaglione()
         {
             if (this.RedditoAnnuale <= 15000)
@@ -65,14 +66,15 @@ namespace Agenzia_delle_entrate
 
         public void getInfoContribuente()
         {
-            Console.WriteLine("==========================================\n");
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.WriteLine("==========================================");
             Console.WriteLine($"CALCOLO DELL'IMPOSTA DA VERSARE:" +
-                $"\r\nContribuente: {this.Nome} {this.Cognome}," +
-                $"\r\nnato il {this.DataNascita} ({this.Sesso})," +
-                $"\r\nresidente in {this.ComuneResidenza}," +
-                $"\r\ncodice fiscale: {this.CodiceFiscale}" +
-                $"\r\nReddito dichiarato: \u20AC{this.RedditoAnnuale.ToString("N2")}" +
-                $"\r\nIMPOSTA DA VERSARE: \u20AC{this.ImpostaDovuta.ToString("N2")}");
+                $"\nContribuente: {this.Nome} {this.Cognome}," +
+                $"\nnato il {this.DataNascita} ({this.Sesso})," +
+                $"\nresidente in {this.ComuneResidenza}," +
+                $"\ncodice fiscale: {this.CodiceFiscale}" +
+                $"\nReddito dichiarato: € {this.RedditoAnnuale.ToString("N2")}" +
+                $"\nIMPOSTA DA VERSARE: \u20AC {this.ImpostaDovuta.ToString("N2")}");
         } 
 
     }
